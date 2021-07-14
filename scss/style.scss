@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@600;900&display=swap");
+@import "./_reset.scss";
+
+body {
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+.carousel {
+  overflow: hidden;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    height: 100vh;
+    cursor: pointer;
+    color: white;
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: all 1s ease-in-out;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+
+  &__item--active {
+    flex: 10;
+    opacity: 1;
+  }
+  &__item--active h2 {
+    opacity: 1;
+    transition: opacity 1s ease-in 0.4s;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0px 0px 30px 30px;
+    font-size: 76px;
+    font-weight: 900;
+    opacity: 0;
+    color: #f0f8ff;
+  }
+}
